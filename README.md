@@ -27,3 +27,7 @@ python3 main.py
 ![secret_santa_2.png](screenshots%2Fsecret_santa_2.png)
 
 ![secret_santa_3.png](screenshots%2Fsecret_santa_3.png)
+
+---
+
+Merry Christmas everyone! 🎅⛄❄️🎄🎁
