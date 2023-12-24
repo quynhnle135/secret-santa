@@ -1,16 +1,30 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+from secret_santa_using_faker_and_bs import match_secret_santa_using_faker
+from secret_santa_using_binary_search import match_secret_santa_using_bs
+from secret_santa_using_circular import match_secret_santa_using_circular
+from menu import menu
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def main():
+    user_choice = input(
+        "Welcome to the Secret Santa Matcher program!\n"
+        "Choose a method to generate pairings:\n"
+        "  (1) Faker: Generates fake names to demonstrate the program.\n"
+        "  (2) Binary Search: Enter real participants' names. Uses a binary search method for matching.\n"
+        "  (3) Circular: Enter real participants' names. Uses a circular assignment method for matching.\n"
+        "Select an option (1, 2, or 3): "
+    )
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    if user_choice == "1":
+        match_secret_santa_using_faker()
+    elif user_choice == "2":
+        names = menu()
+        match_secret_santa_using_bs(names)
+    elif user_choice == "3":
+        names = menu()
+        match_secret_santa_using_circular(names)
+    else:
+        print("Invalid choice.")
+
+
+if __name__ == "__main__":
+    main()
